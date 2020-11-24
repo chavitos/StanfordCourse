@@ -13,6 +13,9 @@
 		DD090EC8255AB2AA00586859 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD090EC7255AB2AA00586859 /* Preview Assets.xcassets */; };
 		DD3A35E2255C1E0D00B9B71F /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3A35E1255C1E0D00B9B71F /* MemoryGame.swift */; };
 		DD3A35E5255D50F300B9B71F /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3A35E4255D50F300B9B71F /* EmojiMemoryGame.swift */; };
+		DDB5689925669978008614D0 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5689825669977008614D0 /* Grid.swift */; };
+		DDB5689D256D291F008614D0 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5689C256D291F008614D0 /* GridLayout.swift */; };
+		DDB568A0256D3575008614D0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5689F256D3575008614D0 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		DD090EC9255AB2AA00586859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD3A35E1255C1E0D00B9B71F /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		DD3A35E4255D50F300B9B71F /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
+		DDB5689825669977008614D0 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Grid.swift; path = Memorize/View/Grid.swift; sourceTree = SOURCE_ROOT; };
+		DDB5689C256D291F008614D0 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridLayout.swift; path = Memorize/View/GridLayout.swift; sourceTree = SOURCE_ROOT; };
+		DDB5689F256D3575008614D0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				DD090EC0255AB2A900586859 /* MemorizeApp.swift */,
-				DD090EC2255AB2A900586859 /* EmojiMemoryGameview.swift */,
-				DD3A35E4255D50F300B9B71F /* EmojiMemoryGame.swift */,
-				DD3A35E1255C1E0D00B9B71F /* MemoryGame.swift */,
+				DDB5689F256D3575008614D0 /* Extensions.swift */,
+				DDB568A3256D4BDA008614D0 /* View */,
+				DDB568A4256D4BDD008614D0 /* ModelView */,
+				DDB568A2256D4BD1008614D0 /* Model */,
 				DD090EC4255AB2AA00586859 /* Assets.xcassets */,
 				DD090EC9255AB2AA00586859 /* Info.plist */,
 				DD090EC6255AB2AA00586859 /* Preview Content */,
@@ -73,6 +80,32 @@
 				DD090EC7255AB2AA00586859 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DDB568A2256D4BD1008614D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD3A35E1255C1E0D00B9B71F /* MemoryGame.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDB568A3256D4BDA008614D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD090EC2255AB2A900586859 /* EmojiMemoryGameview.swift */,
+				DDB5689825669977008614D0 /* Grid.swift */,
+				DDB5689C256D291F008614D0 /* GridLayout.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDB568A4256D4BDD008614D0 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				DD3A35E4255D50F300B9B71F /* EmojiMemoryGame.swift */,
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +180,10 @@
 				DD3A35E2255C1E0D00B9B71F /* MemoryGame.swift in Sources */,
 				DD090EC3255AB2A900586859 /* EmojiMemoryGameview.swift in Sources */,
 				DD090EC1255AB2A900586859 /* MemorizeApp.swift in Sources */,
+				DDB5689D256D291F008614D0 /* GridLayout.swift in Sources */,
 				DD3A35E5255D50F300B9B71F /* EmojiMemoryGame.swift in Sources */,
+				DDB5689925669978008614D0 /* Grid.swift in Sources */,
+				DDB568A0256D3575008614D0 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
