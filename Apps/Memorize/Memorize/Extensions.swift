@@ -22,4 +22,19 @@ extension Array {
     var only: Element? {
         count == 1 ? first : nil
     }
+    
+    var randomValue: Element? {
+        if count > 0 {
+            let randomIndex = Int.random(in: 1..<count)
+            return self[randomIndex]
+        }
+        return nil
+    }
+    
+    var randomIndex: Int {
+        if count > 1 {
+            return Int.random(in: 1..<count)
+        }
+        return 0
+    }
 }
