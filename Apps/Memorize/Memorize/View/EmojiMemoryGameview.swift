@@ -18,14 +18,18 @@ struct EmojiMemoryGameview: View {
                 Text(viewModel.themeName)
                 Spacer()
                 Button("New game") {
-                    viewModel.newGame()
+                    withAnimation(.easeInOut) {
+                        viewModel.newGame()
+                    }
                 }
             }
             .padding()
             Divider()
             Grid(viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
-                    viewModel.choose(card)
+                    withAnimation(.linear) {
+                        viewModel.choose(card)
+                    }
                 }
 //                .aspectRatio(CGSize(width: 3.0, height: 4.0), contentMode: .fit)
                 .padding(5)
@@ -56,8 +60,11 @@ struct CardView: View {
                     .opacity(0.4)
                 Text(card.content)
                     .font(Font.system(size: fontSize(for: size)))
+                    .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
+                    .animation(card.isMatched ? Animation.linear(duration: 1).repeatCount(2, autoreverses: false) : .default)
             }
             .cardify(isFaceUp: card.isFaceUp)
+            .transition(AnyTransition.scale)
         }
     }
     

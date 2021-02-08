@@ -11,11 +11,11 @@ import SwiftUI
 class EmojiMemoryGame: ObservableObject {
     @Published private var model: MemoryGame<String> = createGame()
     static let emojiThemes = [Theme(name: "Halloween", content: ["👻","🦇","🎃","🧙‍♀️"], color: .orange),
-                       Theme(name: "Sports", content: ["⚽️","🥎","🏈","🎱"], color: .blue),
-                       Theme(name: "Tecnology", content: ["⌚️","📱","💻","🖱"], color: .black),
-                       Theme(name: "Animals", content: ["🐶","🦁","🐯","🐷","🦊"], color: .green),
-                       Theme(name: "Flags", content: ["🇨🇦","🇨🇴","🇰🇷","🇺🇸","🇯🇵","🇧🇷"], color: .red),
-                       Theme(name: "Symbols", content: ["☪️","🕉","☮️","💟","♎️","⚛️","✝️"], color: .purple, randomNumberOfCards: true)]
+                              Theme(name: "Sports", content: ["⚽️","🥎","🏈","🎱"], color: .blue),
+                              Theme(name: "Tecnology", content: ["⌚️","📱","💻","🖱"], color: .black),
+                              Theme(name: "Animals", content: ["🐶","🦁","🐯","🐷","🦊"], color: .green),
+                              Theme(name: "Flags", content: ["🇨🇦","🇨🇴","🇰🇷","🇺🇸","🇯🇵","🇧🇷"], color: .red),
+                              Theme(name: "Symbols", content: ["☪️","🕉","☮️","💟","♎️","⚛️","✝️"], color: .purple, randomNumberOfCards: true)]
     
     static private func createGame() -> MemoryGame<String> {
         let theme = emojiThemes.randomValue
